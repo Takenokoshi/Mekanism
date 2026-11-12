@@ -27,6 +27,7 @@ import mekanism.api.recipes.book.ReactingBookCategory;
 import mekanism.api.recipes.book.RotaryBookCategory;
 import mekanism.api.recipes.book.SawingBookCategory;
 import mekanism.api.recipes.book.SmeltingBookCategory;
+import mekanism.api.recipes.book.SupercriticalPhaseShiftingBookCategory;
 import mekanism.api.recipes.book.WashingBookCategory;
 import mekanism.api.recipes.display.recipe.ActivatingRecipeDisplay;
 import mekanism.api.recipes.display.recipe.CentrifugingRecipeDisplay;
@@ -54,6 +55,7 @@ import mekanism.api.recipes.display.recipe.ReactionRecipeDisplay;
 import mekanism.api.recipes.display.recipe.RotaryRecipeDisplay;
 import mekanism.api.recipes.display.recipe.SawingRecipeDisplay;
 import mekanism.api.recipes.display.recipe.SmeltingRecipeDisplay;
+import mekanism.api.recipes.display.recipe.SupercriticalPhaseShiftingRecipeDisplay;
 import mekanism.api.recipes.display.recipe.WashingRecipeDisplay;
 import mekanism.common.Mekanism;
 import mekanism.common.MekanismLang;
@@ -148,4 +150,7 @@ public class MekanismRecipeBookCategories {
 
     public static final MekanismRecipeBookTypes WASHING = RECIPE_BOOK_CATEGORIES.registerAll(MekanismRecipeTypes.NAME_WASHING, MekanismLang.RECIPE_BOOK_TOGGLE_WASHING, WashingBookCategory.values(),
           display -> display instanceof WashingRecipeDisplay);
+
+    public static final MekanismRecipeBookTypes SUPERCRITICAL_PHASE_SHIFTING = RECIPE_BOOK_CATEGORIES.registerAll(MekanismRecipeTypes.NAME_SUPERCRITICAL_PHASE_SHIFTING, MekanismLang.RECIPE_BOOK_TOGGLE_SUPERCRITICAL_PHASE_SHIFTING, SupercriticalPhaseShiftingBookCategory.values(), 
+          display -> display instanceof SupercriticalPhaseShiftingRecipeDisplay);
 }

@@ -34,6 +34,8 @@ import mekanism.api.recipes.book.PigmentMixingBookCategory.PigmentMixingBookInfo
 import mekanism.api.recipes.book.PurifyingBookCategory;
 import mekanism.api.recipes.book.PurifyingBookCategory.PurifyingBookInfo;
 import mekanism.api.recipes.book.SmeltingBookCategory;
+import mekanism.api.recipes.book.SupercriticalPhaseShiftingBookCategory;
+import mekanism.api.recipes.book.SupercriticalPhaseShiftingBookCategory.SupercriticalPhaseShiftingBookInfo;
 import mekanism.api.recipes.book.SmeltingBookCategory.SmeltingBookInfo;
 import mekanism.api.recipes.book.WashingBookCategory;
 import mekanism.api.recipes.book.WashingBookCategory.WashingBookInfo;
@@ -71,6 +73,7 @@ public class MekanismRecipeTypes {
     public static final Identifier NAME_ROTARY = Identifier.fromNamespaceAndPath(MekanismAPI.MEKANISM_MODID, "rotary");
     public static final Identifier NAME_SAWING = Identifier.fromNamespaceAndPath(MekanismAPI.MEKANISM_MODID, "sawing");
     public static final Identifier NAME_LIQUIFICATION = Identifier.fromNamespaceAndPath(MekanismAPI.MEKANISM_MODID, "liquification");
+    public static final Identifier NAME_SUPERCRITICAL_PHASE_SHIFTING = Identifier.fromNamespaceAndPath(MekanismAPI.MEKANISM_MODID, "supercritical_phase_shifting");
 
     public static final DeferredHolder<RecipeType<?>, RecipeType<ItemStackToItemStackRecipe<CrushingBookCategory, CrushingBookInfo>>> TYPE_CRUSHING = DeferredHolder.create(Registries.RECIPE_TYPE, NAME_CRUSHING);
     public static final DeferredHolder<RecipeType<?>, RecipeType<ItemStackToItemStackRecipe<EnrichingBookCategory, EnrichingBookInfo>>> TYPE_ENRICHING = DeferredHolder.create(Registries.RECIPE_TYPE, NAME_ENRICHING);
@@ -99,5 +102,6 @@ public class MekanismRecipeTypes {
     public static final DeferredHolder<RecipeType<?>, RecipeType<RotaryRecipe>> TYPE_ROTARY = DeferredHolder.create(Registries.RECIPE_TYPE, NAME_ROTARY);
     public static final DeferredHolder<RecipeType<?>, RecipeType<SawmillRecipe>> TYPE_SAWING = DeferredHolder.create(Registries.RECIPE_TYPE, NAME_SAWING);
     public static final DeferredHolder<RecipeType<?>, RecipeType<ItemStackToFluidOptionalItemRecipe<LiquificationBookCategory, LiquificationBookInfo>>> TYPE_LIQUIFICATION = DeferredHolder.create(Registries.RECIPE_TYPE, NAME_LIQUIFICATION);
+    public static final DeferredHolder<RecipeType<?>, RecipeType<ChemicalToChemicalRecipe<SupercriticalPhaseShiftingBookCategory ,SupercriticalPhaseShiftingBookInfo>>> TYPE_SUPERCRITICAL_PHASE_SHIFTING = DeferredHolder.create(Registries.RECIPE_TYPE, NAME_SUPERCRITICAL_PHASE_SHIFTING);
 
 }

@@ -27,6 +27,7 @@ import mekanism.api.recipes.basic.BasicPurifyingRecipe;
 import mekanism.api.recipes.basic.BasicRotaryRecipe;
 import mekanism.api.recipes.basic.BasicSawmillRecipe;
 import mekanism.api.recipes.basic.BasicSmeltingRecipe;
+import mekanism.api.recipes.basic.BasicSupercriticalPhaseShiftingRecipe;
 import mekanism.api.recipes.basic.BasicWashingRecipe;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
@@ -69,6 +70,7 @@ public class MekanismRecipeSerializers {
         public static final ResourceKey<RecipeSerializer<?>> ROTARY = key("rotary");
         public static final ResourceKey<RecipeSerializer<?>> SAWING = key("sawing");
         public static final ResourceKey<RecipeSerializer<?>> LIQUIFICATION = key("liquification");
+        public static final ResourceKey<RecipeSerializer<?>> SUPERCRITICAL_PHASE_SHIFTING = key("supercritical_phase_shifting");
     }
 
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<BasicCrushingRecipe>> CRUSHING = DeferredHolder.create(Names.CRUSHING);
@@ -98,4 +100,5 @@ public class MekanismRecipeSerializers {
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<BasicRotaryRecipe>> ROTARY = DeferredHolder.create(Names.ROTARY);
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<BasicSawmillRecipe>> SAWING = DeferredHolder.create(Names.SAWING);
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<BasicLiquificationRecipe>> LIQUIFICATION = DeferredHolder.create(Names.LIQUIFICATION);
+    public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<BasicSupercriticalPhaseShiftingRecipe>> SUPERCRITICAL_PHASE_SHIFTING = DeferredHolder.create(Names.SUPERCRITICAL_PHASE_SHIFTING);
 }

@@ -78,7 +78,9 @@ import mekanism.api.recipes.book.RotaryBookCategory.RotaryBookInfo;
 import mekanism.api.recipes.book.SawingBookCategory;
 import mekanism.api.recipes.book.SawingBookCategory.SawingBookInfo;
 import mekanism.api.recipes.book.SmeltingBookCategory;
+import mekanism.api.recipes.book.SupercriticalPhaseShiftingBookCategory;
 import mekanism.api.recipes.book.SmeltingBookCategory.SmeltingBookInfo;
+import mekanism.api.recipes.book.SupercriticalPhaseShiftingBookCategory.SupercriticalPhaseShiftingBookInfo;
 import mekanism.api.recipes.book.WashingBookCategory;
 import mekanism.api.recipes.book.WashingBookCategory.WashingBookInfo;
 import mekanism.api.recipes.vanilla_input.BiChemicalRecipeInput;
@@ -212,6 +214,9 @@ public class MekanismRecipeType<VANILLA_INPUT extends RecipeInput, BOOK_CATEGORY
 
     public static final RecipeTypeRegistryObject<SingleRecipeInput, LiquificationBookCategory, LiquificationBookInfo, ItemStackToFluidOptionalItemRecipe<LiquificationBookCategory, LiquificationBookInfo>, SingleItem<ItemStackToFluidOptionalItemRecipe<LiquificationBookCategory, LiquificationBookInfo>>> LIQUIFICATION =
           register(MekanismRecipeTypes.NAME_LIQUIFICATION, MekanismRecipeBookCategories.LIQUIFICATION, recipeType -> new SingleItem<>(recipeType, ItemStackToFluidOptionalItemRecipe::getInput));
+
+    public static final RecipeTypeRegistryObject<SingleChemicalRecipeInput, SupercriticalPhaseShiftingBookCategory, SupercriticalPhaseShiftingBookInfo, ChemicalToChemicalRecipe<SupercriticalPhaseShiftingBookCategory, SupercriticalPhaseShiftingBookInfo>, SingleChemical<ChemicalToChemicalRecipe<SupercriticalPhaseShiftingBookCategory, SupercriticalPhaseShiftingBookInfo>>> SUPERCRITICAL_PHASE_SHIFTING =
+          register(MekanismRecipeTypes.NAME_SUPERCRITICAL_PHASE_SHIFTING, MekanismRecipeBookCategories.SUPERCRITICAL_PHASE_SHIFTING, recipeType -> new SingleChemical<>(recipeType, ChemicalToChemicalRecipe::getInput));
 
     private static <VANILLA_INPUT extends RecipeInput, BOOK_CATEGORY extends MekanismBookCategory, BOOK_INFO extends Recipe.BookInfo<BOOK_CATEGORY>,
           RECIPE extends MekanismRecipe<VANILLA_INPUT, BOOK_CATEGORY, BOOK_INFO>, INPUT_CACHE extends IInputRecipeCache>

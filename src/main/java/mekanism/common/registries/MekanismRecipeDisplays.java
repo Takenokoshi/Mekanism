@@ -33,6 +33,7 @@ import mekanism.api.recipes.display.recipe.PurifyingRecipeDisplay;
 import mekanism.api.recipes.display.recipe.ReactionRecipeDisplay;
 import mekanism.api.recipes.display.recipe.SawingRecipeDisplay;
 import mekanism.api.recipes.display.recipe.SmeltingRecipeDisplay;
+import mekanism.api.recipes.display.recipe.SupercriticalPhaseShiftingRecipeDisplay;
 import mekanism.api.recipes.display.recipe.WashingRecipeDisplay;
 import mekanism.common.Mekanism;
 import mekanism.common.registration.impl.RecipeDisplayDeferredRegister;
@@ -149,4 +150,5 @@ public class MekanismRecipeDisplays extends MekanismRecipeSerializers {
     public static final DeferredHolder<RecipeDisplay.Type<?>, RecipeDisplay.Type<DecondensentratingRecipeDisplay>> DECONDENSENTRATING = RECIPE_DISPLAY_TYPE.registerOneInput(MekanismRecipeTypes.NAME_ROTARY.withSuffix("_decondensentrating"), DecondensentratingRecipeDisplay::new);
     public static final DeferredHolder<RecipeDisplay.Type<?>, RecipeDisplay.Type<SawingRecipeDisplay>> SAWING = RECIPE_DISPLAY_TYPE.registerOneInput(MekanismRecipeTypes.NAME_SAWING, SawingRecipeDisplay::new);
     public static final DeferredHolder<RecipeDisplay.Type<?>, RecipeDisplay.Type<LiquificationRecipeDisplay>> LIQUIFICATION = RECIPE_DISPLAY_TYPE.registerOneInput(MekanismRecipeTypes.NAME_LIQUIFICATION, LiquificationRecipeDisplay::new);
+    public static final DeferredHolder<RecipeDisplay.Type<?>, RecipeDisplay.Type<SupercriticalPhaseShiftingRecipeDisplay>> SUPERCRITICAL_PHASE_SHIFTING = RECIPE_DISPLAY_TYPE.registerOneInput(MekanismRecipeTypes.NAME_SUPERCRITICAL_PHASE_SHIFTING, SupercriticalPhaseShiftingRecipeDisplay::new);
 }

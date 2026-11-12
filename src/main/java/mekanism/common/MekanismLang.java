@@ -128,6 +128,7 @@ public enum MekanismLang implements ILangEntry {
     RECIPE_BOOK_TOGGLE_ROTARY("gui", "recipe_book.toggle_recipes.rotary"),
     RECIPE_BOOK_TOGGLE_SAWING("gui", "recipe_book.toggle_recipes.sawing"),
     RECIPE_BOOK_TOGGLE_LIQUIFICATION("gui", "recipe_book.toggle_recipes.liquification"),
+    RECIPE_BOOK_TOGGLE_SUPERCRITICAL_PHASE_SHIFTING("gui", "recipe_book.toggle_recipes.supercritical_phase_shifting"),
     //Key
     KEY_CATEGORY_MAIN("key.category", "main"),
     KEY_HAND_MODE("key", "mode"),

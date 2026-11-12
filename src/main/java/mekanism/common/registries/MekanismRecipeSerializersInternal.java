@@ -28,6 +28,7 @@ import mekanism.api.recipes.basic.BasicPurifyingRecipe;
 import mekanism.api.recipes.basic.BasicRotaryRecipe;
 import mekanism.api.recipes.basic.BasicSawmillRecipe;
 import mekanism.api.recipes.basic.BasicSmeltingRecipe;
+import mekanism.api.recipes.basic.BasicSupercriticalPhaseShiftingRecipe;
 import mekanism.api.recipes.basic.BasicWashingRecipe;
 import mekanism.api.recipes.book.ActivatingBookCategory.ActivatingBookInfo;
 import mekanism.api.recipes.book.CentrifugingBookCategory.CentrifugingBookInfo;
@@ -46,6 +47,7 @@ import mekanism.api.recipes.book.PigmentExtractingBookCategory.PigmentExtracting
 import mekanism.api.recipes.book.PigmentMixingBookCategory.PigmentMixingBookInfo;
 import mekanism.api.recipes.book.PurifyingBookCategory.PurifyingBookInfo;
 import mekanism.api.recipes.book.SmeltingBookCategory.SmeltingBookInfo;
+import mekanism.api.recipes.book.SupercriticalPhaseShiftingBookCategory.SupercriticalPhaseShiftingBookInfo;
 import mekanism.api.recipes.book.WashingBookCategory.WashingBookInfo;
 import mekanism.common.Mekanism;
 import mekanism.common.recipe.ClearConfigurationRecipe;
@@ -120,6 +122,8 @@ public class MekanismRecipeSerializersInternal extends MekanismRecipeSerializers
         register(Names.SAWING, () -> MekanismRecipeSerializer.sawing(BasicSawmillRecipe::new));
 
         register(Names.LIQUIFICATION, () -> MekanismRecipeSerializer.itemToFluidOptionalItem(BasicLiquificationRecipe::new, LiquificationBookInfo.MAP_CODEC, LiquificationBookInfo.STREAM_CODEC));
+
+        register(Names.SUPERCRITICAL_PHASE_SHIFTING, () -> MekanismRecipeSerializer.chemicalToChemical(BasicSupercriticalPhaseShiftingRecipe::new, SupercriticalPhaseShiftingBookInfo.MAP_CODEC, SupercriticalPhaseShiftingBookInfo.STREAM_CODEC));
     }
 
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<MekanismShapedRecipe>> MEK_DATA = RECIPE_SERIALIZERS.register("mek_data", () -> WrappedShapedRecipe.serializer(MekanismShapedRecipe::new));
